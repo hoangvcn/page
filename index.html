@@ -1142,26 +1142,316 @@ footer {
 
 /* RESPONSIVE */
 
-@media (max-width: 768px) {
-
-  .pkg-header { padding: 28px 24px 24px; }
-
-  .pkg-body { padding: 24px 24px 32px; }
-
-  .module-grid { grid-template-columns: 1fr; }
-
-  .other-pkgs { grid-template-columns: 1fr; }
-
-  .pkg-price { font-size: 36px; }
-
+@media (max-width: 1024px) {
+  .module-grid { grid-template-columns: repeat(2, 1fr); }
+  .buoi-grid { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+  .pkg-header { flex-direction: column; gap: 16px; }
   .pkg-price-box { text-align: left; }
-
   .pkg-meta { justify-content: flex-start; }
+}
 
-  .stat-item { min-width: 50%; border-right: none; border-bottom: 1px solid var(--tt-border); }
+@media (max-width: 768px) {
+  /* Hero Section */
+  .hero {
+    padding: 60px 20px 50px;
+    min-height: auto;
+  }
+
+  .hero-logo {
+    font-size: 12px;
+    padding: 6px 16px;
+    margin-bottom: 24px;
+  }
+
+  .hero h1 {
+    font-size: clamp(32px, 7vw, 56px);
+    line-height: 1.1;
+  }
+
+  .hero-sub {
+    font-size: clamp(14px, 2vw, 16px);
+    max-width: 100%;
+    margin: 16px auto 0;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 32px;
+  }
+
+  .btn-primary, .btn-secondary {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  /* Stats */
+  .stats-bar {
+    flex-direction: column;
+  }
+
+  .stat-item {
+    min-width: 100%;
+    padding: 20px 16px;
+    border-right: none;
+    border-bottom: 1px solid var(--tt-border);
+  }
 
   .stat-item:last-child { border-bottom: none; }
 
+  .stat-num { font-size: 24px; }
+  .stat-label { font-size: 11px; }
+
+  /* Sections */
+  .section {
+    padding: 60px 20px;
+  }
+
+  .section-label {
+    font-size: 11px;
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-size: clamp(22px, 5vw, 32px);
+    margin-bottom: 12px;
+  }
+
+  /* Package Cards */
+  .pkg-header {
+    padding: 24px 20px 20px;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .pkg-body { padding: 20px; }
+
+  .pkg-title { font-size: clamp(18px, 4vw, 28px); margin-bottom: 6px; }
+  .pkg-desc { font-size: 13px; }
+
+  .pkg-price { font-size: 32px; }
+  .pkg-price-note { font-size: 12px; }
+
+  .pkg-price-box { text-align: left; }
+  .pkg-meta { justify-content: flex-start; gap: 8px; }
+
+  /* Module Grid */
+  .module-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .module-card {
+    padding: 20px 16px;
+  }
+
+  .module-icon { width: 36px; height: 36px; font-size: 18px; }
+  .module-title { font-size: 13px; margin-bottom: 10px; }
+  .module-list li { font-size: 12px; }
+
+  /* Buoi Grid */
+  .buoi-section { padding-top: 24px; margin-top: 4px; }
+  .buoi-section-title { font-size: 12px; margin-bottom: 16px; }
+  .buoi-grid { grid-template-columns: 1fr; gap: 10px; }
+
+  .buoi-card {
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .buoi-num { font-size: 10px; min-width: 48px; }
+  .buoi-info-title { font-size: 12px; margin-bottom: 3px; }
+  .buoi-info-desc { font-size: 11px; }
+
+  /* Result Strip */
+  .result-strip {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 24px;
+    padding-top: 20px;
+  }
+
+  .result-item { font-size: 12px; }
+
+  /* Other Packages */
+  .other-pkgs { grid-template-columns: 1fr; gap: 16px; }
+
+  .other-pkg-inner { padding: 24px; }
+
+  .other-pkg-title { font-size: 18px; margin-bottom: 6px; }
+  .other-pkg-price { font-size: 28px; margin-bottom: 2px; }
+  .other-pkg-sub { font-size: 12px; margin-bottom: 16px; }
+
+  .other-list li { font-size: 12px; gap: 8px; }
+  .meta-pill { font-size: 10px; padding: 3px 10px; }
+
+  /* Contact Section */
+  .contact-section {
+    padding: 60px 20px;
+  }
+
+  .contact-glow {
+    width: 400px;
+    height: 200px;
+  }
+
+  .contact-title { font-size: clamp(22px, 5vw, 32px); margin-bottom: 10px; }
+  .contact-sub { font-size: 14px; margin-bottom: 32px; }
+
+  .contact-cards {
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+
+  .contact-card {
+    width: 100%;
+    min-width: unset;
+    padding: 16px 20px;
+  }
+
+  .contact-card-label { font-size: 10px; margin-bottom: 4px; }
+  .contact-card-val { font-size: 14px; }
+
+  .cta-final {
+    width: 100%;
+    justify-content: center;
+    font-size: 14px;
+    padding: 14px 28px;
+  }
+
+  /* Footer */
+  footer { padding: 20px 16px; font-size: 12px; }
+}
+
+@media (max-width: 480px) {
+  html { scroll-behavior: auto; }
+
+  /* Hero */
+  .hero {
+    padding: 50px 16px 40px;
+  }
+
+  .hero-logo {
+    font-size: 11px;
+    padding: 5px 14px;
+    margin-bottom: 20px;
+  }
+
+  .hero h1 {
+    font-size: clamp(28px, 6vw, 44px);
+    letter-spacing: -0.01em;
+  }
+
+  .hero-sub {
+    font-size: clamp(13px, 2vw, 15px);
+    line-height: 1.7;
+    margin-top: 12px;
+  }
+
+  .hero-cta { margin-top: 24px; }
+
+  .btn-primary, .btn-secondary {
+    padding: 11px 18px;
+    font-size: 13px;
+    gap: 6px;
+  }
+
+  /* Stats */
+  .stat-item { padding: 16px 12px; }
+  .stat-num { font-size: 20px; }
+  .stat-label { font-size: 10px; }
+
+  /* Sections */
+  .section { padding: 50px 16px; }
+
+  .section-label { font-size: 10px; margin-bottom: 10px; }
+  .section-title { font-size: clamp(20px, 5vw, 28px); margin-bottom: 10px; }
+
+  /* Package */
+  .featured-pkg { margin-bottom: 32px; border-radius: 16px; }
+
+  .pkg-header { padding: 20px 16px 16px; gap: 10px; }
+  .pkg-body { padding: 16px; }
+
+  .pkg-badge { font-size: 10px; padding: 4px 10px; margin-bottom: 8px; }
+  .pkg-badge-hot { font-size: 10px; padding: 3px 10px; }
+
+  .pkg-title { font-size: clamp(16px, 4vw, 22px); margin-bottom: 5px; }
+  .pkg-desc { font-size: 12px; line-height: 1.6; }
+
+  .pkg-price { font-size: 28px; }
+  .pkg-price-note { font-size: 11px; }
+
+  /* Module */
+  .module-grid { gap: 12px; }
+
+  .module-card {
+    padding: 16px 14px;
+    border-radius: 12px;
+  }
+
+  .module-icon { width: 32px; height: 32px; font-size: 16px; margin-bottom: 10px; }
+  .module-title { font-size: 12px; margin-bottom: 8px; }
+  .module-list li { font-size: 11px; gap: 6px; }
+
+  /* Buoi Grid */
+  .buoi-grid { grid-template-columns: 1fr; }
+  .buoi-card { gap: 10px; padding: 12px; border-radius: 10px; }
+  .buoi-num { font-size: 9px; min-width: 44px; padding: 4px 0; }
+  .buoi-info-title { font-size: 11px; }
+  .buoi-info-desc { font-size: 10px; }
+
+  /* Result */
+  .result-strip { margin-top: 20px; padding-top: 16px; }
+  .result-item { font-size: 11px; gap: 8px; }
+  .result-item .check { width: 18px; height: 18px; font-size: 10px; }
+
+  /* Other Packages */
+  .other-pkgs { gap: 12px; }
+  .other-pkg { border-radius: 16px; }
+  .other-pkg-inner { padding: 20px; }
+  .other-pkg-badge { font-size: 10px; padding: 3px 10px; margin-bottom: 12px; }
+  .other-pkg-title { font-size: 16px; margin-bottom: 5px; }
+  .other-pkg-price { font-size: 24px; margin-bottom: 2px; }
+  .other-pkg-sub { font-size: 11px; margin-bottom: 14px; }
+
+  .other-pkg-divider { margin: 14px 0; }
+
+  .other-list li { font-size: 11px; gap: 6px; }
+  .meta-pill { font-size: 9px; padding: 3px 9px; }
+
+  /* Contact */
+  .contact-section { padding: 50px 16px; }
+  .contact-glow { width: 300px; height: 150px; }
+
+  .contact-title { font-size: clamp(20px, 5vw, 28px); margin-bottom: 8px; }
+  .contact-sub { font-size: 13px; margin-bottom: 24px; }
+
+  .contact-cards { gap: 10px; margin-bottom: 24px; }
+  .contact-card { padding: 14px 16px; }
+  .contact-card-label { font-size: 9px; margin-bottom: 3px; }
+  .contact-card-val { font-size: 13px; }
+
+  .cta-final {
+    font-size: 13px;
+    padding: 12px 24px;
+  }
+
+  /* Footer */
+  footer { padding: 16px 12px; font-size: 11px; }
+
+  /* Disable animations on mobile for better performance */
+  .featured-pkg, .other-pkg {
+    transition: border-color 0.2s;
+  }
+  
+  .hero-logo, .hero h1, .hero-sub, .hero-cta, .stats-bar {
+    animation: none !important;
+  }
 }
 
 </style>
